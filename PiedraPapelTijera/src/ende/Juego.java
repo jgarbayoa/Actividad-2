@@ -10,8 +10,8 @@ public class Juego {
         Jugador p2 = new Jugador();
         boolean finDeJuego = false;
         Integer rondasjugadas = 0;    // Número de rondas jugadas
-        Integer exitosJugador1 = p1.exitos;
-        Integer exitosJugador2 = p2.exitos;
+        Integer exitosJugador1 = p1.getExitos();
+        Integer exitosJugador2 = p2.getExitos();
         Integer empates = 0;
         String opcionJugador1, opcionJugador2;
 
