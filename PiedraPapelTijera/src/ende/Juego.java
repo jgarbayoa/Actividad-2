@@ -9,17 +9,17 @@ public class Juego {
         Jugador p1 = new Jugador();
         Jugador p2 = new Jugador();
         boolean finDeJuego = false;
-        Integer Rondasjugadas = 0;    // Número de rondas jugadas
+        Integer rondasjugadas = 0;    // Número de rondas jugadas
         Integer exitosJugador1 = p1.exitos;
         Integer exitosJugador2 = p2.exitos;
-        Integer Empates = 0;
+        Integer empates = 0;
         String opcionJugador1, opcionJugador2;
 
 
         do  // Bucle de juego
         {
-            System.out.println("***** Ronda: " + Rondasjugadas + " *********************\n");
-            System.out.println("Numero de empates: " + Empates + "\n");
+            System.out.println("***** Ronda: " + rondasjugadas + " *********************\n");
+            System.out.println("Numero de empates: " + empates + "\n");
             opcionJugador1 = p1.opcionAlAzar();
             System.out.println("Jugador 1: " + opcionJugador1 + "\t Jugador 1 - Partidas ganadas: " + exitosJugador1);
             opcionJugador2 = p2.opcionAlAzar();
@@ -46,10 +46,10 @@ public class Juego {
                 System.out.println("Jugador 2 GANA");
             }
             if (opcionJugador1 == opcionJugador2) {
-                Empates++;
+                empates++;
                 System.out.println("\n\t\t\t Empate \n");
             }
-            Rondasjugadas++;
+            rondasjugadas++;
             if ((p1.exitos >= 3) || (p2.exitos >= 3)) {
                 finDeJuego = true;
                 System.out.println("FIN DEL JUEGO!!");
